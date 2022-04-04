@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- app palette -->
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#216BEE</color>
+
+    <color name="colorToolbarControlNormal">#ffffff</color>
+
+    <color name="colorText">#FFFFFF</color>
+</resources>

@@ -1,0 +1,3 @@
+rootProject.name='CountryCodeEmojiApplication'
+include ':app'
+include ':country-code-emoji'

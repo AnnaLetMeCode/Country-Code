@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PhoneEditView">
+        <attr name="backgroundColor" format="color" />
+        <attr name="hint" format="reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CountryCodeView">
+        <attr name="ccv_showArrow" format="boolean" />
+        <attr name="ccv_defaultCountry" format="string" />
+        <attr name="ccv_textSize" format="dimension" />
+        <attr name="ccv_flagSize" format="dimension" />
+        <attr name="ccv_mode" format="enum">
+            <enum name="FLAG" value="1" />
+            <enum name="CODE" value="2" />
+            <enum name="CODE_FLAG" value="3" />
+            <enum name="CODE_TITLE" value="4" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>

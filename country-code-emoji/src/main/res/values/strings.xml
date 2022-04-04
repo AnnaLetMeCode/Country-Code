@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="search_title">Search</string>
+    <string name="act_choose_country_title">Choose country</string>
+    <string name="your_phone_number">Your Phone Number</string>
+    <string name="search">Search</string>
+</resources>

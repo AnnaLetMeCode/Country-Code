@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Base application theme-->
+    <style name="CountryTheme" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog</item>
+    </style>
+
+    <!--Base action bar title style-->
+    <style name="AppTheme.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="elevation">0dp</item>
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
+    </style>
+    <!--Base action bar title theme-->
+    <style name="AppTheme.ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorText</item>
+
+    </style>
+    <!--Base toolbar style-->
+    <style name="CountryTheme.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.DayNight.ActionBar</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="CountryTheme.ItemTitle">
+        <item name="textSize">@dimen/text_size_16</item>
+        <item name="android:paddingEnd">@dimen/margin_16</item>
+        <item name="android:paddingStart">@dimen/margin_16</item>
+        <item name="android:paddingTop">@dimen/margin_16</item>
+        <item name="android:paddingBottom">@dimen/margin_16</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="CountryTheme.ItemFlag">
+        <item name="textSize">@dimen/text_size_22</item>
+        <item name="android:paddingEnd">@dimen/margin_12</item>
+        <item name="android:paddingStart">@dimen/margin_12</item>
+        <item name="android:paddingTop">@dimen/margin_16</item>
+        <item name="android:paddingBottom">@dimen/margin_16</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- BottomSheet Dialog -->
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+</resources>

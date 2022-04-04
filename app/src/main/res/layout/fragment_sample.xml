@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_12"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exclude_search_mode"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_exclude_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/exclude_filter_mode"
+        app:layout_constraintTop_toBottomOf="@+id/cb_search" />
+
+    <com.country.emoji.ui.common.views.country.CountryCodeView
+        android:id="@+id/cvv_choose_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:ccv_defaultCountry="RU"
+        app:ccv_flagSize="24sp"
+        app:ccv_mode="CODE_FLAG"
+        app:ccv_showArrow="true"
+        app:ccv_textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ed_phone" />
+
+    <com.country.emoji.ui.common.views.phone.PhoneAppCompatEditText
+        android:id="@+id/ed_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cvv_choose_country"
+        app:layout_constraintTop_toBottomOf="@+id/cb_exclude_mode"
+        tools:text="9526074347" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

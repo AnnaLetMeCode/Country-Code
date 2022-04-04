@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- app palette -->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#216BEE</color>
+    <color name="colorToolbarControlNormal">#000000</color>
+    <color name="colorText">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite88">#88FFFFFF</color>
+    <color name="colorFrenchGray">#C7C7CC</color>
+    <color name="colorBlue">#216BEE</color>
+    <color name="colorBlue11">#55216BEE</color>
+    <color name="colorTangaroa">#04183B</color>
+    <color name="colorBlueZodiac">#172B4F</color>
+    <color name="colorPictonBlue">#2BCDF0</color>
+    <color name="colorTorchRed">#F7202C</color>
+    <color name="colorLima">#7ED321</color>
+</resources>

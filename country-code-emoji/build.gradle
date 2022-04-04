@@ -1,0 +1,88 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: "com.vanniktech.maven.publish"
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        // Flag to enable support for the new language APIs
+        coreLibraryDesugaringEnabled true
+        // Sets Java compatibility to Java 8
+        sourceCompatibility rootProject.ext.javaSourceCompatibility
+        targetCompatibility rootProject.ext.javaTargetCompatibility
+    }
+
+    kotlinOptions {
+        jvmTarget = rootProject.ext.kotlinJvmTarget
+    }
+}
+
+dependencies {
+
+    def constraint_version = '2.1.3'
+    def core_ktx_version = '1.7.0'
+    def junit_version = "1.1.3"
+    def gso_version = "2.8.9"
+    def recyclerview_version = "1.2.1"
+    def appcompat_version = "1.4.1"
+    def espresso_version = "3.4.0"
+    def material_version = "1.6.0-beta01"
+    def emoji_version = "1.1.0"
+    def coroutines_version = "1.6.0"
+    def api_result_act = "1.6.0-alpha01"
+    def api_result_fr = "1.5.0-alpha04"
+    def core_ktx = "1.7.0"
+
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    //Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation "androidx.test.ext:junit:$junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    //Kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "androidx.core:core-ktx:$core_ktx_version"
+    //UI
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    api "androidx.recyclerview:recyclerview:$recyclerview_version"
+    api "androidx.constraintlayout:constraintlayout:$constraint_version"
+    api "com.google.android.material:material:$material_version"
+    //Emoji provider and views
+    api "androidx.emoji:emoji-bundled:$emoji_version"
+    api "androidx.emoji:emoji:$emoji_version"
+    api "androidx.emoji:emoji-appcompat:$emoji_version"
+
+    //JSON representation
+    api "com.google.code.gson:gson:$gso_version"
+    //Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    api "androidx.core:core-ktx:$core_ktx"
+    api "androidx.activity:activity-ktx:$api_result_act"
+    api "androidx.fragment:fragment-ktx:$api_result_fr"
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+}
